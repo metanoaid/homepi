@@ -3,6 +3,7 @@
 Вывод данных на коридорный терминал
 
 [Форум](https://www.raspberrypi.org/forums/)
+[Документация по VLC](https://wiki.videolan.org/Documentation:Command_line/)
 
 # Физические устройства
 
