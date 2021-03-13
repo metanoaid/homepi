@@ -38,6 +38,8 @@
 > lsblk
 > 
 > ncdu /
+> 
+> rm -rf ~/.cache/chromium
 
 ```
 apt update
@@ -58,7 +60,7 @@ reboot
 * htop
 * nginx
 * git
-* chromium-browser
+* chromium-browser // /usr/bin/chromium   -> traditional package
 * unclutter // hide the cursor
 * vlc
 * ncdu
