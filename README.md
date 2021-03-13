@@ -2,61 +2,49 @@
 
 Вывод данных на коридорный терминал
 
-* [Форум](https://www.raspberrypi.org/forums/)
+* [Форум RaspBerry Pi](https://www.raspberrypi.org/forums/)
 * [Документация по VLC](https://wiki.videolan.org/Documentation:Command_line/)
 
 # Физические устройства
 
-- Камера:
-- Монитор:
-- Сервер:
-- Используется сетевые устройства:
+* Камера:
+* Монитор:
+* Сервер: Raspberry Pi 2 Model B Rev 1.1
+  * CPU: ARMv7 rev 5 (v7l) (4) @ 0.9GHz
+  * Memory: 310MB / 925MB
+  * DISK: карта mmcblk 3.8Gb
+* Используется сетевые устройства:
 
 # Уровень OS
 
 * Прошивка (BIOS): rpi-5.10.y
+* Kernel: 4.19.66-v7+
 * Raspbian GNU/Linux 9.13 (stretch) armv7l
   * (#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi)
-* Raspberry Pi 2 Model B Rev 1.1
-* Kernel: 4.19.66-v7+
-* CPU: ARMv7 rev 5 (v7l) (4) @ 0.9GHz
-* Memory: 310MB / 925MB
-* DISK: карта mmcblk 3.8Gb
+  * *fixme* судя по всему еще yandex репозитории, проверить
 
 # Уровень soft
 
-
-
-
-# Уровень скриптов
-
-
-
-## Используемый софт
-
-* *удален* omxplayer 0.3.7 (Build date: Fri, 07 Jun 2019 19:49:22 f06235c) https://github.com/popcornmix/omxplayer.git
 * neofetch
-* nginx
+* openbox
+* mc
+* htop
+* nginx, root диркетория /home/pi/www/homepi/
+* git
 * chromium-browser
 * unclutter (hide the cursor)
 * vlc
 
-```
-ssh pi
-su pi
-```
+# Уровень скриптов
 
-```
-.config
-	- openbox
-		-autostart.sh
-	- chromium
-	- mc
-	- htop
-```
+Подключение с локальных устройств через ssh ключ к адресу: 192.168.0.21 по 22 порту. Ключевые настройки выполняются от пользователя pi (12345), код веб и потока с камеры находится в данном репозитории.
 
-autostart.sh
-  запускает бразуер chromium, с определенными ключами, загружает страницу html с этого же сервера
+Используется 3 скрипта:
+* скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh *сделать симлинк на файл в репозитории*
+* веб-страницы /home/pi/www/homepi/index.html, использует [API яндекс карт](https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html), добавляет информер по погоде, часы
+* видеопоток с камеры
+
+
 
 ```
 chromium-browser \
@@ -76,11 +64,10 @@ xset s noblank
 xset s off
 xset s -dpms
 ```
+xset s noblank // tells to X server to not blank the video device.
+xset s off // выключает screensaver
+xset s -dpms // disables the DPMS ([Display Power Management Signaling](https://en.wikipedia.org/wiki/VESA_Display_Power_Management_Signaling))
 
-/home/pi/www/homepi/index.html
-  использует API яндекс карт, добавляет информер по погоде, часы
-  Код в github: 
-  API яндекса https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html
   
 Video.sh
 
