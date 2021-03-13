@@ -4,6 +4,7 @@
 
 * [Форум RaspBerry Pi](https://www.raspberrypi.org/forums/)
 * [Документация по VLC](https://wiki.videolan.org/Documentation:Command_line/)
+* [Chromium](https://www.chromium.org/Home)
 
 # Физические устройства
 
