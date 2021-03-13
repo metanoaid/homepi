@@ -21,7 +21,7 @@
 * Kernel: 4.19.66-v7+
 * Raspbian GNU/Linux 9.13 (stretch) armv7l
   * (#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi)
-  * *fixme* судя по всему еще yandex репозитории, проверить
+>  * *fixme* судя по всему еще yandex репозитории, проверить
 
 # Обновление PI
 
@@ -40,10 +40,10 @@ stretch > buster
 * openbox
 * mc
 * htop
-* nginx, root диркетория /home/pi/www/homepi/
+* nginx
 * git
 * chromium-browser
-* unclutter (hide the cursor)
+* unclutter // hide the cursor
 * vlc
 
 # Уровень скриптов
@@ -51,7 +51,8 @@ stretch > buster
 Подключение с локальных устройств через ssh ключ к адресу: 192.168.0.21 по 22 порту. Ключевые настройки выполняются от пользователя pi (12345), код веб и потока с камеры находится в данном репозитории.
 
 Используется 3 скрипта:
-* скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh *сделать симлинк на файл в репозитории*
+* скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh
+> * *сделать симлинк на файл в репозитории*
 * веб-страницы /home/pi/www/homepi/index.html, использует [API яндекс карт](https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html), добавляет информер по погоде, часы
 * видеопоток с камеры
   * rtsp://192.168.0.20:554
