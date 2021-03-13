@@ -57,10 +57,10 @@
   * http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture (статичная картинка)
   * rtsp://192.168.0.20:554/mpeg4 (MPEG4)
 
-crontab запущен от имени pi и нажимает F5 раз в час
+crontab запускается от рута (-e) и нажимает F5 раз в минуту, пишет лог в /home/pi/tmp.cron
 ```
 crontab -e
-0 */1 * * * xdotool key 'F5'
+* * * * * /home/pi/homepi/reload.sh 2>/home/pi/tmp.cron
 ```
 
 ## Скрипт автозапуска autostart.sh
