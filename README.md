@@ -30,7 +30,7 @@
 # Уровень soft
 
 * neofetch
-* lightdm
+* lightdm // менеджер входа в систему
 * openbox
 * mc
 * htop
