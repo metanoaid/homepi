@@ -41,7 +41,7 @@
 * vlc
 * ncdu
 * crontab
-* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5'
+* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5' (вносим в .profile в home пользователя)
 
 # Уровень скриптов
 
