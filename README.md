@@ -208,7 +208,7 @@ omxplayer "rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2" --avdi
 rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2
 ```
 
-http стрим работающий
+http фотка статичная стрим работающий
 
 ```
 http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture
