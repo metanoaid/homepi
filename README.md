@@ -41,6 +41,7 @@
 * vlc
 * ncdu
 * crontab
+* xdotool // удалена
 
 # Уровень скриптов
 
