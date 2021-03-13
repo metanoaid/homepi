@@ -72,7 +72,7 @@ reboot
 
 Используется 3 скрипта:
 * скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh
-> * *сделать симлинк на файл в репозитории*
+* создана жесткая ссылка из /home/pi/www/homepi/autostart.sh в /home/pi/.config/openbox/autostart.sh (для возможности хранения скрипта в git репо)
 * веб-страницы /home/pi/www/homepi/index.html, использует [API яндекс карт](https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html), добавляет информер по погоде, часы
 * видеопоток с камеры
   * rtsp://192.168.0.20:554
