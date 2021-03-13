@@ -27,10 +27,15 @@
 
 Все от root или sudo, при нехватке места
 > du / |sort -n
+> 
 > apt purge somesoft
+> 
 > raspi-config
+> 
 > rm -rf /user/share/doc
+> 
 > lsblk
+> 
 > ncdu /
 
 ```
