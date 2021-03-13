@@ -27,34 +27,6 @@
   * deb http://archive.raspberrypi.org/debian/ stretch main ui
 >  * *fixme* судя по всему еще yandex репозитории, проверить
 
-# Обновление PI
-
-Все от root или sudo, при нехватке места
-> du / | sort -n
-> 
-> apt purge somesoft
-> 
-> raspi-config
-> 
-> rm -rf /user/share/doc
-> 
-> lsblk
-> 
-> ncdu /
-> 
-> rm -rf ~/.cache/chromium
-
-```
-apt update
-apt dist-upgrade -y
-sudo rpi-update // обновить прошивку
-vim /etc/apt/sources.list
-stretch > buster
-apt autoremove -y
-apt autoclean // apt clean
-reboot
-```
-
 # Уровень soft
 
 * neofetch
@@ -116,4 +88,42 @@ chromium-browser http://admin:22sS8XQtKv@192.168.0.20:80/Streaming/Channels/101/
 Можно выводить нагрузку на wifi сеть
 потребление воды, электричество
 температуру в доме с датчиков
+```
+
+# Обновление PI
+
+Все от root или sudo, при нехватке места
+```
+du / | sort -n
+apt purge somesoft
+raspi-config 
+rm -rf /user/share/doc
+lsblk
+ncdu / 
+rm -rf ~/.cache/chromium
+```
+
+```
+apt update
+apt dist-upgrade -y
+sudo rpi-update // обновить прошивку
+vim /etc/apt/sources.list
+stretch > buster
+apt autoremove -y
+apt autoclean // apt clean
+reboot
+```
+
+# Использование git
+
+Репозиторий homepi.git, репозиторий склонирован на сервер PI и на macon макбук.
+
+при работе на сервере
+```
+git pull
+// вводим креды github
+git add
+git commit -am 'commit's text'
+git push
+// вводим креды github
 ```
