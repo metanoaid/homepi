@@ -7,6 +7,7 @@
 * [Документация по Chromium](https://www.chromium.org/Home)
 * [Документация по Openbox](http://openbox.org/wiki/Main_Page)
 * [API яндекс карт](https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html)
+* [Кабинет developer Yandex](https://developer.tech.yandex.ru/services/)
 * [Генератор crontab](https://crontab.guru/#*_*_*_*)
 
 # Физические устройства
