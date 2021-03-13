@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script>
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+
+    function init () {
+	// Создание экземпляра карты и его привязка к контейнеру с
+	// заданным id ("map").
+	myMap = new ymaps.Map('map', {
+	    // При инициализации карты обязательно нужно указать
+	    // её центр и коэффициент масштабирования.
+	    center: [59.85571984, 30.34642999], 
+	    zoom: 13,
+	    controls: []
+	});
+	
+//	    center: [59.83671984, 30.34642999], 
+	
+	
+	var actualProvider = new ymaps.traffic.provider.Actual({}, { infoLayerShown: true });
+    // И затем добавим его на карту.
+    actualProvider.setMap(myMap);
+	
+	
+    }
+    </script>
+    
+    
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left:0;
+            right:0;
+        }
+        
+        .gsInformer .gsTemp{
+        font-size:12pt;
+        }
+    </style>
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+    
+</head>
+
+<body style="overflow:hidden;">
+
+
+<!--
+<img src="http://admin:12345@192.168.0.20/Streaming/Channels/1/picture" id="kal" style="background-color:red;width:800px;height:452px;z-index:101;position:absolute;right:0;top:0;">
+  -->
+  <script>
+
+ // window.document.getElementById('kal').addEventListener("load",function() {
+  
+ // window.document.getElementById('kal').src="http://admin:12345@192.168.0.20/Streaming/Channels/1/picture?"+Math.random();
+ // console.log(1);
+ // });
+  
+  
+  setTimeout(function() {
+    window.location="http://grigory.info/Entrance.html";  
+  
+  },10*60*1000);
+  
+  
+  </script>
+  
+
+
+<div id="map"></div>
+
+
+
+
+<div style="position:absolute;left:10px;top:10px;"><!-- bigmir)net weather informer: rossiya, sankt-peterburg, 360x105, blue, ru --> 
+<a href="http://weather.bigmir.net/main/sankt-peterburg/6747/" target="_blank" title="Прогноз погоды в Санкт-Петербурге &#187; Россия" onclick="javascript:this.href+='?informer=1'"><img src="http://bmu.img.com.ua/informer/weather/ru/360x105/blue/rossiya/sankt-peterburg.png" width="360" height="105" alt="Прогноз погоды в Санкт-Петербурге &#187; Россия" title="Погода Санкт-Петербурге &#187; Россия" border="0" /></a>
+<!-- END bigmir)net weather informer -->
+
+</div>
+
+
+<div style="position:absolute;left:90px;top:140px;font-family: 'Saira Semi Condensed', sans-serif;font-size:70px;line-height:70px;">
+
+<div style="background-color:white;border-radius:10px;border: 1px solid #888;padding:10px 15px 10px 15px;" id="clock">
+--:--
+</div>
+
+</div>
+
+<script>
+
+setInterval(function() {
+window.document.getElementById("clock").innerHTML=new Date().toLocaleTimeString('en-US', { hour12: false, hour: "numeric", minute: "numeric"});;
+},1000);
+
+</script>
+
+</body>
+
+</html>
