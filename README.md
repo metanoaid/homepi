@@ -25,13 +25,23 @@
 
 # Обновление PI
 
+Все от root или sudo, при нехватке места
+> du / |sort -n
+> apt purge somesoft
+> raspi-config
+> rm -rf /user/share/doc
+> lsblk
+> ncdu /
+
 ```
 apt update
 apt dist-upgrade -y
 sudo rpi-update // обновить прошивку
 vim /etc/apt/sources.list
 stretch > buster
-
+apt autoremove -y
+apt autoclean // apt clean
+reboot
 ```
 
 # Уровень soft
@@ -86,6 +96,17 @@ Video.sh
 
 внести: cvlc "rtsp://192.168.0.20:554" --no-audio --no-fullscreen --video-on-top --no-video-title-show
 или внести: cvlc "rtsp://192.168.0.20:554/mpeg4" --no-audio --no-fullscreen --video-on-top --no-video-title-show
+
+```
+--no-audio // выключает звук
+--fullscreen // sets fullscreen video
+--no-fullscreen
+--video-on-top
+--no-video-title-show
+--width, --height <integer> sets the video window dimensions. By default, the video window size will be adjusted to match the video dimensions
+--aspect-ratio <mode> forces source aspect ratio. Modes are 4x3, 16x9
+
+```
 
 старый:
 ```
