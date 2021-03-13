@@ -2,8 +2,8 @@
 
 Вывод данных на коридорный терминал
 
-[Форум](https://www.raspberrypi.org/forums/)
-[Документация по VLC](https://wiki.videolan.org/Documentation:Command_line/)
+* [Форум](https://www.raspberrypi.org/forums/)
+* [Документация по VLC](https://wiki.videolan.org/Documentation:Command_line/)
 
 # Физические устройства
 
@@ -15,7 +15,8 @@
 # Уровень OS
 
 * Прошивка (BIOS): rpi-5.10.y
-* Raspbian GNU/Linux 9.13 (stretch) armv7l (#deb-src http://raspbian.raspberrypi.org/raspbian/ stretch main contrib non-free rpi)
+* Raspbian GNU/Linux 9.13 (stretch) armv7l
+  * (#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi)
 * Raspberry Pi 2 Model B Rev 1.1
 * Kernel: 4.19.66-v7+
 * CPU: ARMv7 rev 5 (v7l) (4) @ 0.9GHz
