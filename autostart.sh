@@ -1,3 +1,4 @@
+#!/bin/bash
 chromium-browser \
     --no-first-run \
     --disable \
