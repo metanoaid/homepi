@@ -38,7 +38,7 @@
 * htop
 * nginx
 * git
-* chromium-browser // /usr/bin/chromium   -> traditional package
+* chromium-browser // /usr/bin/chromium   -> traditional package (через https://github.com/scheib/chromium-latest-linux.git)
 * unclutter // hide the cursor
 * vlc
 * ncdu
