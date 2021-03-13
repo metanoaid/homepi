@@ -60,6 +60,7 @@ reboot
 * chromium-browser
 * unclutter // hide the cursor
 * vlc
+* ncdu
 
 # Уровень скриптов
 
