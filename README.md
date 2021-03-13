@@ -30,7 +30,7 @@
 # Уровень soft
 
 * neofetch
-* lightdm // менеджер входа в систему
+* lightdm // менеджер входа в систему - в конфиге задан openbox
 * openbox
 * mc
 * htop
@@ -62,6 +62,8 @@
 * xset s noblank // tells to X server to not blank the video device.
 * xset s off // выключает screensaver
 * xset s -dpms // disables the DPMS ([Display Power Management Signaling](https://en.wikipedia.org/wiki/VESA_Display_Power_Management_Signaling))
+
+[Отключение dpms навсегда через lightdm](https://www.geeks3d.com/hacklab/20160108/how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/)
 
 ## Скрипт запуска видеопотока camera.sh
 
@@ -113,6 +115,7 @@ stretch > buster
 apt autoremove -y
 apt autoclean // apt clean
 reboot
+raspi-config // конфигурирование RaspBerryPi
 ```
 
 # Использование git
