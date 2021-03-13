@@ -27,7 +27,6 @@
 * Raspbian GNU/Linux 10 (buster) armv7l
   * deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
   * deb http://archive.raspberrypi.org/debian/ stretch main ui
->  * *fixme* судя по всему еще yandex репозитории, проверить
 
 # Уровень soft
 
