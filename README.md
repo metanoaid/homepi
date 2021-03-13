@@ -26,7 +26,7 @@
 # Обновление PI
 
 Все от root или sudo, при нехватке места
-> du / |sort -n
+> du / | sort -n
 > 
 > apt purge somesoft
 > 
