@@ -9,7 +9,7 @@ chromium-browser \
     --kiosk \
     -app="http://192.168.0.21/index.html" &
 
-#/home/pi/www/homepi/camera.sh&
+#/home/pi/homepi/camera.sh&
 
 xset s noblank
 xset s off
