@@ -41,13 +41,13 @@
 * vlc
 * ncdu
 * crontab
-* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5' (вносим в .profile в home пользователя)
+* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5' (вносим в .profile в home пользователя или в sh скрипте reload)
 
 # Уровень скриптов
 
 Подключение с локальных устройств через ssh ключ к адресу: 192.168.0.21 по 22 порту. Ключевые настройки выполняются от пользователя pi (12345), код веб и потока с камеры находится в данном репозитории.
 
-Используется 3 скрипта:
+Используются скрипты:
 * создана жесткая ссылка из /home/pi/homepi/autostart.sh в /home/pi/.config/openbox/autostart.sh (для возможности хранения скрипта в git репо)
 * скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh
 * веб-страницы /home/pi/homepi/index.html, использует API yandex, добавляет информер по погоде, часы
@@ -56,11 +56,13 @@
   * rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2 (работает sub stream 640 480: substream 640 480 MJPEG 25)
   * http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture (статичная картинка)
   * rtsp://192.168.0.20:554/mpeg4 (MPEG4)
+* reload, запущен через крон
 
-crontab запускается от рута (-e) и нажимает F5 раз в минуту, пишет лог в /home/pi/tmp.cron
+crontab запускается от pi и нажимает F5 раз в минуту, пишет лог в /home/pi/tmp.cron (есть пустая строчка после записи крона)
 ```
 crontab -e
-* * * * * /home/pi/homepi/reload.sh 2>/home/pi/tmp.cron
+* /5 * * * /home/pi/homepi/reload.sh 2>/home/pi/tmp.cron
+
 ```
 
 ## Скрипт автозапуска autostart.sh
