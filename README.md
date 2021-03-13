@@ -6,6 +6,7 @@
 * [Документация по VLC](https://wiki.videolan.org/Documentation:Command_line/)
 * [Документация по Chromium](https://www.chromium.org/Home)
 * [Документация по Openbox](http://openbox.org/wiki/Main_Page)
+* [API яндекс карт](https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html)
 
 # Физические устройства
 
@@ -72,41 +73,30 @@ reboot
 Подключение с локальных устройств через ssh ключ к адресу: 192.168.0.21 по 22 порту. Ключевые настройки выполняются от пользователя pi (12345), код веб и потока с камеры находится в данном репозитории.
 
 Используется 3 скрипта:
+* создана жесткая ссылка из /home/pi/homepi/autostart.sh в /home/pi/.config/openbox/autostart.sh (для возможности хранения скрипта в git репо)
 * скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh
-* создана жесткая ссылка из /home/pi/www/homepi/autostart.sh в /home/pi/.config/openbox/autostart.sh (для возможности хранения скрипта в git репо)
-* веб-страницы /home/pi/www/homepi/index.html, использует [API яндекс карт](https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html), добавляет информер по погоде, часы
+* веб-страницы /home/pi/homepi/index.html, использует API yandex, добавляет информер по погоде, часы
 * видеопоток с камеры
   * rtsp://192.168.0.20:554
   * rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2 (работает sub stream 640 480: substream 640 480 MJPEG 25)
   * http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture (статичная картинка)
   * rtsp://192.168.0.20:554/mpeg4 (MPEG4)
 
-```
-chromium-browser \
-    --no-first-run \
-    --disable \
-    --disable-translate \
-    --disable-infobars \
-    --disable-suggestions-service \
-    --disable-save-password-bubble \
-    --start-maximized \
-    --kiosk \
-    -app="http://192.168.0.21/index.html" &
+## Скрипт автозапуска
 
-/home/pi/Video.sh&
+Запускает браузер, скрипт с видео и управляет энергопитанием монитора
 
-xset s noblank
-xset s off
-xset s -dpms
-```
 * xset s noblank // tells to X server to not blank the video device.
 * xset s off // выключает screensaver
 * xset s -dpms // disables the DPMS ([Display Power Management Signaling](https://en.wikipedia.org/wiki/VESA_Display_Power_Management_Signaling))
 
-Video.sh
+## Скрипт запуска видеопотока camera.sh
 
-внести: cvlc "rtsp://192.168.0.20:554" --no-audio --no-fullscreen --video-on-top --no-video-title-show
-или внести: cvlc "rtsp://192.168.0.20:554/mpeg4" --no-audio --no-fullscreen --video-on-top --no-video-title-show
+внести:
+```
+cvlc "rtsp://192.168.0.20:554" --no-audio --no-fullscreen --video-on-top --no-video-title-show
+cvlc "rtsp://192.168.0.20:554/mpeg4" --no-audio --no-fullscreen --video-on-top --no-video-title-show
+```
 
 ```
 --no-audio // выключает звук
@@ -116,34 +106,14 @@ Video.sh
 --no-video-title-show
 --width, --height <integer> sets the video window dimensions. By default, the video window size will be adjusted to match the video dimensions
 --aspect-ratio <mode> forces source aspect ratio. Modes are 4x3, 16x9
-
 ```
 
-старый:
+# Что можно выводить на панель
 ```
-#!/bin/bash
-while  true ; do
-        #omxplayer rtsp://192.168.0.20/live --win 1560,0,1960,640 --orientation 90
-        #omxplayer rtsp://192.168.0.20:554/Streaming/Channels/1 --win 1560,0,1960,640 --threshold 0.5 --orientation 90 --live
-        #omxplayer rtsp://192.168.0.20/live --win 1280,0,1960,360
-	omxplayer "rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/1" rtsp_transport:tcp --no-osd --live --with-info --stats
-        sleep 5
-done
-```
+chromium-browser http://admin:22sS8XQtKv@192.168.0.20:80/Streaming/Channels/101/picture --kiosk --start-fullscreen
 
-Файлик с линками
-```
-cvlc "rtsp://192.168.0.20:554" --no-audio --no-fullscreen --video-on-top --no-video-title-show
-
-# не работает killall -9 chromium-browser
-
-chromium-browser http://admin:12345@192.168.0.20:80/Streaming/Channels/101/picture --kiosk --start-fullscreen
-
-Ставим ZoneMinder
-
+Аналоги: ZoneMinder
 Можно выводить нагрузку на wifi сеть
-потребление воды
-электричество
-
+потребление воды, электричество
 температуру в доме с датчиков
 ```
