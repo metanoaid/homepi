@@ -65,6 +65,8 @@
 
 [Отключение dpms навсегда через lightdm](https://www.geeks3d.com/hacklab/20160108/how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/)
 
+unclutter -idle 0.5 -root & // удаляет курсор с экрана
+
 ## Скрипт запуска видеопотока camera.sh
 
 внести:
