@@ -63,6 +63,8 @@
 * xset s off // выключает screensaver
 * xset s -dpms // disables the DPMS ([Display Power Management Signaling](https://en.wikipedia.org/wiki/VESA_Display_Power_Management_Signaling))
 
+[Отключение dpms навсегда через lightdm](https://www.geeks3d.com/hacklab/20160108/how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/)
+
 ## Скрипт запуска видеопотока camera.sh
 
 внести:
