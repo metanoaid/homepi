@@ -49,8 +49,10 @@ xset s off
 xset s -dpms
 ```
 
-/home/pi/www/index.html
-  использует API яндекс карт, добавляет информер по погоде, еще были часы
+/home/pi/www/homepi/index.html
+  использует API яндекс карт, добавляет информер по погоде, часы
+  Код в github: 
+  API яндекса https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html
   
 ```
 <!DOCTYPE html>
