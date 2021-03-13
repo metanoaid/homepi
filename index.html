@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Drakkar home center</title>
+    
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5d01410d-699a-4a48-8c5f-9cb185281679&lang=ru_RU" type="text/javascript"></script>
+    <script src="map.js" type="text/javascript"></script>
+    <script src="clock.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body style="overflow:hidden;">
+
+    <div id="map"></div>
+
+<!-- bigmir weather informer -->
+    <div style="position:absolute;left:10px;top:10px;">
+        <a href="http://weather.bigmir.net/main/sankt-peterburg/6747/" target="_blank" title="Прогноз погоды в Санкт-Петербурге &#187; Россия" onclick="javascript:this.href+='?informer=1'"><img src="http://bmu.img.com.ua/informer/weather/ru/360x105/blue/rossiya/sankt-peterburg.png" width="360" height="105" alt="Прогноз погоды в Санкт-Петербурге &#187; Россия" title="Погода Санкт-Петербурге &#187; Россия" border="0" /></a>
+    </div>
+<!-- END bigmir)net weather informer -->
+
+<!-- CLOCK -->
+<div style="position:absolute;left:90px;top:140px;font-family: 'Saira Semi Condensed', sans-serif;font-size:70px;line-height:70px;">
+    <div style="background-color:white;border-radius:10px;border: 1px solid #888;padding:10px 15px 10px 15px;" id="clock">--:--</div>
+</div>
+<!-- END CLOCK -->
+
+</body>
+
+</html>
