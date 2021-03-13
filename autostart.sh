@@ -10,6 +10,8 @@ chromium-browser \
     --kiosk \
     -app="http://192.168.0.21/index.html" &
 
+unclutter -idle 0.5 -root &
+
 #/home/pi/homepi/camera.sh&
 
 xset s noblank
