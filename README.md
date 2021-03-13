@@ -207,3 +207,9 @@ omxplayer "rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2" --avdi
 # работает sub stream 640 480: substream 640 480 MJPEG 25
 rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2
 ```
+
+http стрим работающий
+
+```
+http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture
+```
