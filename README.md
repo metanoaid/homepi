@@ -22,7 +22,7 @@
 
 * Прошивка (BIOS): rpi-5.10.y
 * Kernel: 4.19.66-v7+
-* Raspbian GNU/Linux 9.13 (stretch) armv7l
+* Raspbian GNU/Linux 10 (buster) armv7l
   * deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
   * deb http://archive.raspberrypi.org/debian/ stretch main ui
 >  * *fixme* судя по всему еще yandex репозитории, проверить
@@ -64,6 +64,8 @@
 * xset s -dpms // disables the DPMS ([Display Power Management Signaling](https://en.wikipedia.org/wiki/VESA_Display_Power_Management_Signaling))
 
 [Отключение dpms навсегда через lightdm](https://www.geeks3d.com/hacklab/20160108/how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/)
+
+unclutter -idle 0.5 -root & // удаляет курсор с экрана
 
 ## Скрипт запуска видеопотока camera.sh
 
