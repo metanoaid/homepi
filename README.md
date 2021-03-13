@@ -138,4 +138,12 @@ cvlc "rtsp://192.168.0.20:554" --no-audio --no-fullscreen --video-on-top --no-vi
 # не работает killall -9 chromium-browser
 
 chromium-browser http://admin:12345@192.168.0.20:80/Streaming/Channels/101/picture --kiosk --start-fullscreen
+
+Ставим ZoneMinder
+
+Можно выводить нагрузку на wifi сеть
+потребление воды
+электричество
+
+температуру в доме с датчиков
 ```
