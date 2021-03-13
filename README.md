@@ -21,7 +21,8 @@
 * Прошивка (BIOS): rpi-5.10.y
 * Kernel: 4.19.66-v7+
 * Raspbian GNU/Linux 9.13 (stretch) armv7l
-  * (#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi)
+  * deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+  * deb http://archive.raspberrypi.org/debian/ stretch main ui
 >  * *fixme* судя по всему еще yandex репозитории, проверить
 
 # Обновление PI
