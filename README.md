@@ -41,7 +41,7 @@
 * vlc
 * ncdu
 * crontab
-* xdotool // удалена
+* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5'
 
 # Уровень скриптов
 
@@ -56,10 +56,11 @@
   * rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2 (работает sub stream 640 480: substream 640 480 MJPEG 25)
   * http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture (статичная картинка)
   * rtsp://192.168.0.20:554/mpeg4 (MPEG4)
+
 crontab запущен от имени pi и нажимает F5 раз в час
 ```
 crontab -e
-0 */1 * * * xte -x :0 "key F5"
+0 */1 * * * xdotool key 'F5'
 ```
 
 ## Скрипт автозапуска autostart.sh
