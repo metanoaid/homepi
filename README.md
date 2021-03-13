@@ -1,17 +1,43 @@
 # homepi
+
 Вывод данных на коридорный терминал
 
-# Существующий конфиг
+[Форум](https://www.raspberrypi.org/forums/)
 
-Используемый софт
------------------
+# Физические устройства
 
-omxplayer
-  для отображения видеопотока
-neofetch
-  для красоты
-nginx
-  для отображения html файлов на сервере
+- Камера:
+- Монитор:
+- Сервер:
+- Используется сетевые устройства:
+
+# Уровень OS
+
+* Прошивка (BIOS): rpi-5.10.y
+* Raspbian GNU/Linux 9.13 (stretch) armv7l (#deb-src http://raspbian.raspberrypi.org/raspbian/ stretch main contrib non-free rpi)
+* Raspberry Pi 2 Model B Rev 1.1
+* Kernel: 4.19.66-v7+
+* CPU: ARMv7 rev 5 (v7l) (4) @ 0.9GHz
+* Memory: 310MB / 925MB
+* DISK: карта mmcblk 3.8Gb
+
+# Уровень soft
+
+
+
+
+# Уровень скриптов
+
+
+
+## Используемый софт
+
+* *удален* omxplayer 0.3.7 (Build date: Fri, 07 Jun 2019 19:49:22 f06235c) https://github.com/popcornmix/omxplayer.git
+* neofetch
+* nginx
+* chromium-browser
+* unclutter (hide the cursor)
+* vlc
 
 ```
 ssh pi
@@ -54,80 +80,6 @@ xset s -dpms
   Код в github: 
   API яндекса https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html
   
-```
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-    <script>
-    var myMap;
-
-    // Дождёмся загрузки API и готовности DOM.
-    ymaps.ready(init);
-
-    function init () {
-	// Создание экземпляра карты и его привязка к контейнеру с
-	// заданным id ("map").
-	myMap = new ymaps.Map('map', {
-	    // При инициализации карты обязательно нужно указать
-	    // её центр и коэффициент масштабирования.
-        // center: [59.83671984, 30.34642999]
-	    center: [59.852011, 30.310520],
-	    zoom: 13,
-	    controls: []
-	});
-
-	var actualProvider = new ymaps.traffic.provider.Actual({}, { infoLayerShown: true });
-    // И затем добавим его на карту.
-    actualProvider.setMap(myMap);
-
-    }
-    </script>
-
-    <style>
-        body, html {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        #map {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left:0;
-            right:0;
-        }
-
-        .gsInformer .gsTemp{
-        font-size:12pt;
-        }
-    </style>
-
-    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c4a45ae419.js" crossorigin="anonymous"></script>
-
-</head>
-
-<body style="overflow:hidden;">
-
-<div id="map"></div>
-
-<div style="position:absolute;left:10px;top:10px;">
-<a href="http://weather.bigmir.net/main/sankt-peterburg/6747/" target="_blank" title="Прогноз погоды в Санкт-Петербурге &#187; Россия" onclick="javascript:this.href+='?informer=1'"><img src="http://bmu.img.com.ua/informer/weather/ru/360x105/blue/rossiya/sankt-peterburg.png" width="360" height="105" alt="Прогноз погоды в Санкт-Петербурге &#187; Россия" title="Погода Санкт-Петербурге &#187; Россия" border="0" /></a>
-
-</div>
-
-</body>
-
-</html>
-```
-  
 Video.sh
 
 старый:
@@ -141,7 +93,7 @@ while  true ; do
         sleep 5
 done
 ```
-работающий:
+работающий старый 2:
 ```
 #!/bin/bash
 while  true ; do
@@ -149,8 +101,11 @@ while  true ; do
         sleep 5
 done
 ```
+
+
+
 Подключение к камере через браузер:
-  открывает поток в VLC проигрывателе, есть попап с подвтерждением
+  открывает поток в VLC проигрывателе, есть попап с подтверждением
 ```
 rtsp://192.168.0.20:554
 ```
@@ -214,4 +169,16 @@ http фотка статичная стрим работающий
 
 ```
 http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture
+```
+
+Обновление PI
+
+```
+apt update
+apt dist-upgrade -y
+sudo rpi-update // обновить прошивку
+vim /etc/apt/sources.list
+stretch > buster
+
+
 ```
