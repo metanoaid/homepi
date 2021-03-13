@@ -115,6 +115,7 @@ stretch > buster
 apt autoremove -y
 apt autoclean // apt clean
 reboot
+raspi-config // конфигурирование RaspBerryPi
 ```
 
 # Использование git
