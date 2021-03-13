@@ -62,7 +62,7 @@
 crontab запускается от pi и нажимает F5 раз в минуту, пишет лог в /home/pi/tmp.cron (есть пустая строчка после записи крона)
 ```
 crontab -e
-* /5 * * * /home/pi/homepi/reload.sh 2>/home/pi/tmp.cron
+*/5 * * * * /home/pi/homepi/reload.sh 2>/home/pi/tmp.cron
 
 ```
 
