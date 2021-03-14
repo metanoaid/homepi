@@ -1,4 +1,6 @@
 #!/bin/bash
+export DISPLAY=":0" &&
+
 chromium-browser \
     --no-first-run \
     --disable \
