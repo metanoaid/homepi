@@ -18,7 +18,7 @@
   * CPU: ARMv7 rev 5 (v7l) (4) @ 0.9GHz
   * Memory: 310MB / 925MB
   * DISK: карта mmcblk 3.8Gb
-  * Питание: 5V, 2A #2
+  * Питание: 5V, 2A metanoaid/homepi/#2
 * Используется сетевые устройства:
 
 # Уровень OS
