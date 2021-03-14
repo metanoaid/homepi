@@ -80,10 +80,13 @@ unclutter -idle 0.5 -root & // удаляет курсор с экрана
 
 ## Скрипт запуска видеопотока camera.sh
 
+cvlc - старт VLC media плеер без интерфейса
+
 внести:
 ```
 cvlc "rtsp://192.168.0.20:554" --no-audio --no-fullscreen --video-on-top --no-video-title-show
 cvlc "rtsp://192.168.0.20:554/mpeg4" --no-audio --no-fullscreen --video-on-top --no-video-title-show
+killall -9 vlc
 ```
 
 ```
