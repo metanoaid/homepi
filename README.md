@@ -146,3 +146,9 @@ git commit -am 'commit's text'
 git push
 // вводим креды github
 ```
+
+Experimental
+Отключить кеш chromium
+vim /etc/chromium-browser/default
+
+
