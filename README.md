@@ -42,7 +42,7 @@
 * vlc revision 3.0.12-1-0-gd147bb5e7e
 * ncdu
 * crontab
-* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5' (вносим в .profile в home пользователя или в sh скрипте reload)
+* xdotool // необходимо сказать `export DISPLAY=":0"` перед началом xdotool key 'F5' (вносим в .profile в home пользователя или в sh скрипте reload), добавлен export DISPLAY=:0 в .bashrc пользоватея pi
 
 # Уровень скриптов
 
