@@ -1,2 +1,2 @@
 #!/bin/bash
-xdotool key 'F5'
+export DISPLAY=":0" && xdotool key 'F5'
