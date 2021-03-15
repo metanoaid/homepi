@@ -55,8 +55,8 @@
 * веб-страницы /home/pi/homepi/index.html, использует API yandex, добавляет информер по погоде, часы
 * видеопоток с камеры
   * rtsp://192.168.0.20:554
-  * rtsp://admin:22sS8XQtKv@192.168.0.20:554/Streaming/Channels/2 (работает sub stream 640 480: substream 640 480 MJPEG 25)
-  * http://admin:22sS8XQtKv@192.168.0.20/Streaming/Channels/1/picture (статичная картинка)
+  * rtsp://admin:passhere@192.168.0.20:554/Streaming/Channels/2 (работает sub stream 640 480: substream 640 480 MJPEG 25)
+  * http://admin:passhere@192.168.0.20/Streaming/Channels/1/picture (статичная картинка)
   * rtsp://192.168.0.20:554/mpeg4 (MPEG4)
 * reload, запущен через крон
 
@@ -100,7 +100,7 @@ killall -9 vlc
 
 # Что можно выводить на панель
 ```
-chromium-browser http://admin:22sS8XQtKv@192.168.0.20:80/Streaming/Channels/101/picture --kiosk --start-fullscreen
+chromium-browser http://admin:passhere@192.168.0.20:80/Streaming/Channels/101/picture --kiosk --start-fullscreen
 
 Аналоги: ZoneMinder
 Можно выводить нагрузку на wifi сеть
@@ -148,8 +148,7 @@ git push
 // вводим креды github
 ```
 
-Experimental
-Отключить кеш chromium
-vim /etc/chromium-browser/default
+# Experimental
+Отключен кеш chromium
 
-
+`vim /etc/chromium-browser/default`
