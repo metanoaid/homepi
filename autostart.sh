@@ -1,5 +1,5 @@
 #!/bin/bash
-export DISPLAY=":0" &&
+#export DISPLAY=":0" &&
 
 chromium-browser \
     --no-first-run \
@@ -12,10 +12,10 @@ chromium-browser \
     --kiosk \
     -app="http://192.168.0.21/index.html" &
 
-unclutter -idle 0.5 -root &
+#unclutter -idle 0.5 -root &
 
 #/home/pi/homepi/camera.sh&
 
-xset s noblank
-xset s off
-xset s -dpms
+#xset s noblank
+#xset s off
+#xset s -dpms
