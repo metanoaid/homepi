@@ -14,7 +14,7 @@ chromium-browser \
 
 unclutter -idle 0.5 -root &
 
-/home/pi/homepi/camera.sh&
+#/home/pi/homepi/camera.sh&
 
 xset s noblank
 xset s off
