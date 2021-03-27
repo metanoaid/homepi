@@ -149,6 +149,6 @@ git push
 ```
 
 # Experimental
-Отключен кеш chromium
+Отключен кеш chromium, включен кеш chromium
 
 `vim /etc/chromium-browser/default`
