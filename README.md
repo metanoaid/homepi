@@ -51,6 +51,9 @@
 
 Используются скрипты:
 * создана жесткая ссылка из /home/pi/homepi/autostart.sh в /home/pi/.config/openbox/autostart.sh (для возможности хранения скрипта в git репо)
+```
+ln source hardlink
+```
 * скрипт автозапуска программного обеспечения (указанного ниже) ~/.config/openbox/autostart.sh
 * веб-страницы /home/pi/homepi/index.html, использует API yandex, добавляет информер по погоде, часы
 * видеопоток с камеры
